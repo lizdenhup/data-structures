@@ -31,6 +31,10 @@
 # WIP -- right now you are only doing one pass of the
 # array...you need to do n-1 passes to get the nth largest
 # elements to bubble to the right length - 1 - nth place.
+
+# This is where you'are at in the video
+#
+# https://youtu.be/Jdtq5uKz-w4?list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&t=261
 def bubble_sort(a)
   i = 0
   while i <= a.length - 2
