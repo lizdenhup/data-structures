@@ -36,13 +36,13 @@
 #
 # https://youtu.be/Jdtq5uKz-w4?list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&t=261
 def bubble_sort(a)
-  i = 0
-  while i <= a.length - 2
-    puts "i: #{i}"
-    if a[i] > a[i+1]
-      tmp = a[i]
-      a[i] = a[i+1]
-      a[i+1] = tmp
+  i,j = 0,0
+  while i <= a.length - 1
+    while j <= a.length - 2
+      if a[j+1] < a[j]
+        a[j], a[j+1] = a[j+1], a[j]
+      end
+      j += 1
     end
     i += 1
   end
