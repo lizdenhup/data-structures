@@ -17,7 +17,7 @@ class RemoveDuplicates
         if nums[j] == nums[i]
           nums.delete_at(j)
         else
-          j += 1
+          break;
         end
       end
       i += 1
