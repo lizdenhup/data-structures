@@ -10,17 +10,11 @@ class HashMap
   ALPHABET_MAP = {"a"=>0, "b"=>1, "c"=>2, "d"=>3, "e"=>4, "f"=>5, "g"=>6, "h"=>7, "i"=>8, "j"=>9, "k"=>10, "l"=>11, "m"=>12, "n"=>13, "o"=>14, "p"=>15, "q"=>16, "r"=>17, "s"=>18, "t"=>19, "u"=>20, "v"=>21, "w"=>22, "x"=>23, "y"=>24, "z"=>25}
 
   def initialize
-  end
-
-  def self.hash_function(input)
-    if input.class == "String"
-      ALPHABET_MAP[str] % 7
-    else
-      input % 7
-    end
+    @hash_table = []
   end
 
   def put(key, val)
+    hashing_function(key)
   end
 
   def remove(key)
@@ -32,8 +26,17 @@ class HashMap
   def get_random
   end
 
+  private
+
+  def hashing_function(input)
+    if input.class == "String"
+      ALPHABET_MAP[str] % 7
+    else
+      input % 7
+    end
+  end
+
 end
 
 # hm = HashMap.new
 # puts "#{hm.put('a', 32)}"
-puts "#{HashMap.hash_function(33)}"
